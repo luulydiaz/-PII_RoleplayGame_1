@@ -4,20 +4,13 @@ namespace Library
 {
     public class Glove
     {
-        public string Name {get;private set;}
-        public int Defense {get;set;}
-        public int Attack {get;set;}
-        public int Health {get;set;}
-
-
-        public Glove(string name)
+        public int Damage { get; set; }
+        public int Defense { get; set; }
+        public Glove()
         {
-            this.Name = name;
-            this.Defense=0;
-            this.Attack=40;
-            this.Health=0;
-
+            this.Damage = 5;
+            this.Defense = 0;
         }
-        
+ 
     }
 }

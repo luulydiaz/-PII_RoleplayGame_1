@@ -2,54 +2,37 @@ namespace Library
 {
     public class Dwarf
     {
-        public string Name {get;private set;}
-        public int Health {get;private set;}
-        public int Attack {get;private set;}
-        public int Defense {get;private set;}
-        public Glove Glove {get;}
-        public RedGem RedGem1 {get;}
-
-        public Dwarf(string name)
+        private Glove glove = new Glove();
+        private RedGem glove = new RedGem();
+        
+        public Dwarf(string name, int life, int baseDamage, int baseDefense )
         {
-            this.Name=name;
-            this.Glove= new Glove("Glove");
-            this.RedGem1= new RedGem("RedGem1");
-            this.Health=100 + RedGem1.Health;
-            this.Attack=50 + Guante1.Attack;
-            this.Defense=30;
+            this.Name = name;
+            this.Life = life;
+            this.Glove= glove;
+            this.RedGem= redGem;
+            this.BaseDamage= baseDamage;
+            this.BaseDefense= baseDefense;
             
         }
-
-        public string ReceiveAttack(Dwarf Enemigo)
-        {
-            if (Enemigo.Attack<=this.Defense)
-            {
-                this.Defense-=Enemigo.Attack;
-            }
-            if (Enemigo.Attack>this.Defense)
-            {
-                this.Defense=0;
-                this.Health-=(Enemigo.Attack-this.Defense);
-            }
-            if (this.Health<0)
-            {
-                this.Health=0;
-                return $"{this.Name} is dead";
-            }
-            else 
-            {
-                return $"{this.Name}'s Health is: {this.Health}";
-            }
-        }
-
-        public void Curar()
-        {
-            if (this.Health<100)
-            {
-                this.Health=100;
-            }
-        }
-
         
+        public string Name {get; set;}
+        public int Life {get; set;}
+        public int BaseDamage {get; set;}
+        public int BaseDefense {get; set;}
+        public Glove Glove {get; set;}
+        public RedGem RedGem {get; set;}
+
+        public int Damage()
+        {
+            return this.BaseDamage + Glove.DamageValue;
+        }
+
+        public int Defense()
+        {
+            return this.BaseDefense + RedGem.DefenseValue;
+        }
     }
 }
+
+        
