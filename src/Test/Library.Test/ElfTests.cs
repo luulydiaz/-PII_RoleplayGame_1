@@ -3,14 +3,14 @@ using ElfClass;
 
 namespace Test.Library
 {
-    public class ExampleTest
+    public class ElfTest
     {
         private Elf elf;
 
         [SetUp]
         public void SetUp()
         {
-            Elf elf = new Elf("Facu");
+            this.elf = new Elf("Facu");
         }
 
         [Test]
@@ -35,7 +35,7 @@ namespace Test.Library
         {
             elf.ReceiveAttack(150);
             elf.Cure();
-
+            
             Assert.AreEqual(0, elf.Life);
         }
 

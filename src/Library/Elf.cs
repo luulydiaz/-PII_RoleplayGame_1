@@ -34,7 +34,7 @@ namespace ElfClass
                 }
                 else
                 {
-                    this.life = value;
+                    this.life = 0;
                 }
             }    
         }
@@ -65,9 +65,9 @@ namespace ElfClass
 
         public void Cure()
         {
-            if (this.life>0)
+            if (this.Life>0)
            {
-               this.life = this.MaxLife;
+               this.Life = this.MaxLife;
            }
         }
     }
