@@ -1,38 +1,84 @@
 using System;
 
-namespace ROLEPLAY_GAME.Library
+namespace FairyClass
 {
     public class Fairy
     {
+        private int life;
         private MagicMirror magicMirror = new MagicMirror();
-        private PixieBow pixieBox = new PixieBow();
+        private PixieBow pixieBow = new PixieBow();
         
-        public Fairy(string name, int life, PixieBow pixieBow, MagicMirror magicMirror, int baseDamage, int baseDefense)
+        
+        public Fairy(string name)
         {
-            this.Name = name;
-            this.Life = life;
             this.PixieBow = pixieBow;
             this.MagicMirror = magicMirror;
-            this.BaseDamage = baseDamage;
-            this.BaseDefense = baseDefense;
+            this.Name = name;
+            this.Life = 100;
+            this.MaxLife = 100;
+            this.BaseDamage = 3;
+            this.BaseDefense = 1;
         }
 
-        private String Name { get; set; }
-        private int Life {get; set; }
-        private int BaseDamage {get; set;}
-        private int BaseDefense { get; set; }
-        private PixieBow PixieBow {get; set; }
-        private MagicMirror MagicMirror { get; set; }
-
-
-        public int Damage()
+        public PixieBow PixieBow {get; set; }
+        public MagicMirror MagicMirror { get; set; }
+        public int MaxLife { get; set; }
+        private int Life 
         {
-            return this.BaseDamage + PixieBow.DamageValue;
+            get
+            {
+                return this.life;
+            }
+            set
+            {
+                if (value >= 0)
+                {
+                    this.life = value;
+                }
+                else if (value<0)
+                {
+                    this.life=0;
+                }
+                else
+                {
+                    this.life= 0;
+                }
+            }
+        }
+        public String Name { get; set; }
+        public int BaseDamage {get; set;}
+        public int BaseDefense { get; set; }
+
+
+        public int Damage
+        {
+           get
+           {
+               return this.BaseDamage + PixieBow.DamageValue + MagicMirror.DamageValue;
+           }
+
         }
 
-        public int Defense()
+        public int Defense
         {
-            return this.BaseDefense + MagicMirror.DefenseValue;
+            get
+            {
+                return this.BaseDefense + PixieBow.DefenseValue + MagicMirror.DefenseValue;
+            }
+        }
+
+        public void ReceiveAttack(int damage)
+        {
+            int damageDealt = damage - this.Defense;
+            if (damageDealt > 0)
+            {
+                this.Life = this.Life - damageDealt;
+            }
+        }
+
+        public void Cure()
+        {
+            this.Life = this.MaxLife;
         }
     }
 }
