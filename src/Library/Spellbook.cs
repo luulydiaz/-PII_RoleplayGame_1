@@ -5,7 +5,7 @@ namespace WizardClass
 {
     public class Spellbook
     {
-        private readonly List<Spell> spells;
+        private List<Spell> spells;
 
         public Spellbook()
         {

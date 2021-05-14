@@ -67,7 +67,11 @@ namespace WizardClass
 
         public void Cure()
         {
-            this.Life = this.MaxLife;
+            if(this.Life > 0)
+            {
+                this.Life = this.MaxLife;
+            }
+            
         }
     }
 }
