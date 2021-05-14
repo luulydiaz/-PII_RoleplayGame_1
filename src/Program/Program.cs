@@ -1,4 +1,17 @@
 using System;
+using DwarvesClass;
+
+namespace Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+        }
+    }
+}
+using System;
 using ElfClass;
 using WizardClass;
 
