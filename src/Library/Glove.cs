@@ -1,16 +1,17 @@
 using System;
 
-namespace Library
+namespace DwarvesClass
 {
     public class Glove
     {
-        public int Damage { get; set; }
-        public int Defense { get; set; }
         public Glove()
         {
-            this.Damage = 5;
-            this.Defense = 0;
+            this.DamageValue = 5;
+            this.DefenseValue = 0;
         }
- 
+
+        public int DamageValue { get; set; }
+        
+        public int DefenseValue { get; set; }
     }
 }

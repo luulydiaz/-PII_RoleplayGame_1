@@ -1,16 +1,17 @@
 using System;
 
-namespace Library
+namespace DwarvesClass
 {
     public class RedGem
     {
-        public int Damage { get; set; }
-        public int Defense { get; set; }
         public RedGem()
         {
-            this.Damage = 0;
-            this.Defense = 15;
+            this.DamageValue = 0;
+            this.DefenseValue = 10;
         }
- 
+
+        public int DamageValue { get; set; }
+        
+        public int DefenseValue { get; set; }
     }
 }
