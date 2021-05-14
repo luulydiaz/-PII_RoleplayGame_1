@@ -1,16 +1,16 @@
-namespace clases
+namespace ElfClass
 {
     public class Dagger
     {
         public Dagger()
         {
-            this.Defense = 0;
-            this.Damage = 10;
+            this.DefenseValue = 0;
+            this.DamageValue = 10;
         }
 
-        public int Damage { get; }
+        public int DamageValue { get; }
 
-        public int Defense { get; }
+        public int DefenseValue { get; }
 
     }
 }

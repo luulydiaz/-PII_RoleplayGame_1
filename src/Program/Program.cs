@@ -1,5 +1,5 @@
 ﻿using System;
-using clases;
+using ElfClass;
 
 namespace Program
 {
@@ -8,9 +8,8 @@ namespace Program
         static void Main(string[] args)
         {
 
-            Elf elf = new Elf("Facundo", 80, 2, 8);
+            Elf elf = new Elf("Facundo");
             Console.WriteLine("Name: " + elf.Name + "\nLife: " + elf.Life + "\nDamage: " + elf.Damage + "\nDefense: " + elf.Defense);
-
         }
     }
 }

@@ -1,16 +1,15 @@
-namespace clases
+namespace ElfClass
 {
     public class Hood
     {
         public Hood()
         {
-            this.Damage = 0;
-            this.Defense = 7;
+            this.DamageValue = 0;
+            this.DefenseValue = 7;
         }
 
-        public int Defense { get; }
+        public int DefenseValue { get; set; }
 
-        public int Damage { get; }
-
+        public int DamageValue { get; set; }
     }
 }
