@@ -23,7 +23,7 @@ namespace FairyClass
         public PixieBow PixieBow {get; set; }
         public MagicMirror MagicMirror { get; set; }
         public int MaxLife { get; set; }
-        private int Life 
+        public int Life 
         {
             get
             {
