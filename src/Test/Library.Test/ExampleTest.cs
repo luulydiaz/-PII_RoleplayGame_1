@@ -6,7 +6,7 @@ namespace Test.Library
     public class ExampleTest
     {
         private Elf elf;
-        
+
         [SetUp]
         public void SetUp()
         {
@@ -30,7 +30,7 @@ namespace Test.Library
             Assert.GreaterOrEqual(inicialLife,elf.Life);
         }
 
-        [Test]
+         [Test]
         public void doesntRevive() //Prueba que el personaje al llegar a 0 de vida no puede curarse
         {
             elf.ReceiveAttack(150);
