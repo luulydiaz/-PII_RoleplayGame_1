@@ -71,7 +71,6 @@ namespace WizardClass
             {
                 this.Life = this.MaxLife;
             }
-            
         }
     }
 }
