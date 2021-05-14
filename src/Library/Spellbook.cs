@@ -10,7 +10,7 @@ namespace WizardClass
         public Spellbook()
         {
             this.spells = new List<Spell>();
-            this.DamageValue = spells.Count;
+            this.DamageValue = 0 ;
             this.DefenseValue = 0;
         }
 
