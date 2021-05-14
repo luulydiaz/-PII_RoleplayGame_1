@@ -1,4 +1,5 @@
 ﻿using System;
+using WizardClass;
 
 namespace Program
 {
