@@ -5,11 +5,11 @@ namespace WizardClass
     {
         public Cloak()
         {
-            this.Damage = 0;
-            this.Defense = 5;
+            this.DamageValue = 0;
+            this.DefenseValue = 5;
         }
 
-        public int Damage { get; set; }
-        public int Defense { get; set; }
+        public int DamageValue { get; set; }
+        public int DefenseValue { get; set; }
     }
 }

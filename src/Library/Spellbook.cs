@@ -5,15 +5,16 @@ namespace WizardClass
 {
     public class Spellbook
     {
-        private List<Spell> spells;
+        private readonly List<Spell> spells;
 
         public Spellbook()
         {
             this.spells = new List<Spell>();
-            this.DamageValue = 0 ;
+            this.DamageValue = 0;
             this.DefenseValue = 0;
         }
 
+        public List<Spell> Spells { get; }
         public int DamageValue { get; set; }
         public int DefenseValue { get; set; }
 

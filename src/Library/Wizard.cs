@@ -11,11 +11,10 @@ namespace WizardClass
             this.Spellbook = spellbook;
             this.Cloak = cloak;
             this.Name = name;
-            this.Life = 100;
+            this.Life = 60;
             this.MaxLife = 100;
             this.BaseDamage = 5;
             this.BaseDefense = 0;
-
         }
 
         public Spellbook Spellbook { get; set; }
@@ -29,17 +28,13 @@ namespace WizardClass
             }
             set
             {
-                if (value >= 0 && value <= MaxLife)
+                if (0 <= value )
                 {
                     this.life = value;
                 }
-                else if (value < 0)
+                else 
                 {
                     this.life = 0;
-                }
-                else
-                {
-                    this.life = MaxLife;
                 }
             }
         }
@@ -50,14 +45,14 @@ namespace WizardClass
         {
             get
             {
-                return BaseDamage + spellbook.DamageValue + Cloak.Damage;
+                return BaseDamage + spellbook.DamageValue + Cloak.DamageValue;
             }
         }
         public int Defense
         {
             get
             {
-                return BaseDefense + spellbook.DefenseValue + Cloak.Defense;
+                return BaseDefense + spellbook.DefenseValue + Cloak.DefenseValue;
             }
         }
 
@@ -70,7 +65,7 @@ namespace WizardClass
             }
         }
 
-        public void MeDaExactamenteLoMismo()
+        public void Cure()
         {
             this.Life = this.MaxLife;
         }
