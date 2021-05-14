@@ -65,7 +65,10 @@ namespace ElfClass
 
         public void Cure()
         {
-            this.Life = this.MaxLife;
+            if (this.life>0)
+           {
+               this.life = this.MaxLife;
+           }
         }
     }
 

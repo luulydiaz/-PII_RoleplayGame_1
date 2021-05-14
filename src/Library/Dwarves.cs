@@ -68,10 +68,10 @@ namespace DwarvesClass
 
         public void Cure()
         {
-            if(this.Life > 0)
-            {
-                this.Life = this.MaxLife;
-            }
+           if (this.life>0)
+           {
+               this.life = this.MaxLife;
+           }
         }
     }
 }
