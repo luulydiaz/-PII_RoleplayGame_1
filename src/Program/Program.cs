@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using ElfClass;
+using WizardClass;
 
 namespace Program
 {
